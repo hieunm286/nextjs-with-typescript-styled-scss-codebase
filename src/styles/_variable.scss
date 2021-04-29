@@ -1,0 +1,43 @@
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+@mixin media-query($key, $breakpoint: $grid-breakpoints) {
+  @media (min-width: map-get($breakpoint, $key)) {
+    @content;
+  }
+}
+
+@mixin make-container(
+  $max-width: $container-max-widths,
+  $breakpoint: $grid-breakpoints
+) {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 to-rem(15px);
+  @each $breakpoint, $container-max-width in $max-width {
+    @include media-query($breakpoint) {
+      max-width: $container-max-width;
+    }
+  }
+}
+
+$base-size: 16px;
+
+@function to-rem($size, $context: $base-size) {
+    @return $size / $base-size * 1rem;
+}
