@@ -5,6 +5,8 @@ import styles from '../styles/Home.module.scss';
 
 const RedText = styled.p`
   color: red;
+  font-weight: bold;
+  font-size: 40px;
 `
 
 const Home: React.FC = () => {
@@ -17,7 +19,7 @@ const Home: React.FC = () => {
       </Head>
 
       <main className={styles.main}>
-        <RedText>ABCXYZ</RedText>
+        <RedText>Red Text Bold</RedText>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
