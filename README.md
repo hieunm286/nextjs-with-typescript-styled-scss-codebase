@@ -3,6 +3,8 @@
 1. Install all package: yarn install
 2. For testing: yarn test
 3. Run: yarn dev
+4. Analyze bundle size: yarn analyze
+5. Build and Analyze: yarn build:analyze
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

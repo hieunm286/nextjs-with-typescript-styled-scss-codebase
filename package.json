@@ -5,9 +5,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "analyze": "source-map-explorer .next/static/**/*.js",
     "start": "next start",
     "test": "jest",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "build:analyze": "yarn build && yarn analyze"
   },
   "dependencies": {
     "@babel/core": "^7.13.16",
@@ -19,6 +21,7 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "sass": "^1.32.12",
+    "source-map-explorer": "^2.5.2",
     "styled-components": "^5.2.3"
   },
   "devDependencies": {
